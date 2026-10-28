@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-// El cerebro: mira la información de un pago y decide qué hacer.
-// No toca la base de datos, solo decide.
+
 public class ReconciliationRules {
 
     public Decision decide(PaymentInfo info) {
@@ -90,3 +89,4 @@ public class ReconciliationRules {
         return Decision.fix(reason, needsConfirm, toReverse);
     }
 }
+

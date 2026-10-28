@@ -36,7 +36,7 @@ public class PaymentRepository {
 
     // Arma la "foto" completa del pago para el cerebro
     public PaymentInfo loadInfo(long paymentId) {
-        Map<String, Object> payment = jdbc.queryForMap(
+        Map<String, Object> payment = jdbc.queryForMap( 
                 "SELECT status, amount FROM PAYMENT WHERE id = ?", paymentId);
 
         Integer approved = jdbc.queryForObject(
